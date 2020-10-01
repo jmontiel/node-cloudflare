@@ -674,6 +674,7 @@ var CloudFlare = PromiseObject.create({
 		$deferred.resolve(this._request({
 			query: {
 				auto_pagination: Joi.boolean(),
+				'account.id': Joi.string().max(32),
 				name: Joi.string().max(253),
 				status: Joi.string().valid('active', 'pending', 'initializing', 'moved', 'deleted', 'deactivated'),
 				order: Joi.string().valid('name', 'status', 'email'),
