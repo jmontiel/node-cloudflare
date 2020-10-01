@@ -9,6 +9,8 @@ It also supports automatic request retries.
 
 ## Installation
 
+**Note: Tested to works with Node v8.16.9. Node v10 and abobe doesn't work**
+
 This module is published in NPM:
 
 ```
@@ -74,7 +76,7 @@ api.userGet(true)
 would return
 ```
 {
-	result: { 
+	result: {
 		id: 'dc19c3231tds452eb4ebc123d6eb4c99',
 		email: 'email@domain.com',
 		username: 'username',
@@ -101,7 +103,7 @@ would return
 and with raw set to false (the default), it would return
 
 ```
-{ 
+{
 	id: 'dc19c3231tds452eb4ebc123d6eb4c99',
 	email: 'email@domain.com',
 	username: 'username',
