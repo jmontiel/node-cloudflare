@@ -629,11 +629,11 @@ var CloudFlare = PromiseObject.create({
 		$deferred.resolve(this._request({
 			body: Joi.object({
 				name: Joi.string().max(253).required(),
-				jump_start: Joi.boolean(),
-				organization: Joi.object({
-					id: Joi.string().required().length(32),
-					name: Joi.string().max(100)
-				})
+				type: Joi.string().valid('full', 'partial'),
+				account: Joi.object({
+					id: Joi.string().required().length(32)
+				}),
+				jump_start: Joi.boolean()
 			}).required()
 		}, {
 			callee: 'zoneNew',
