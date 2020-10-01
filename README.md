@@ -9,10 +9,9 @@ It also supports automatic request retries.
 
 ## Installation
 
-**Note: Tested to work with Node v8.16.9. Node v10 and abobe doesn't work**
+**Note: Tested to work with Node v8.16.9. Node v10 and above doesn't work**
 
 This module is published in NPM:
-
 ```
 npm install cloudflare4 --save
 ```
