@@ -9,7 +9,7 @@ It also supports automatic request retries.
 
 ## Installation
 
-**Note: Tested to works with Node v8.16.9. Node v10 and abobe doesn't work**
+**Note: Tested to work with Node v8.16.9. Node v10 and abobe doesn't work**
 
 This module is published in NPM:
 
