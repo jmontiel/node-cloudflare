@@ -1560,6 +1560,7 @@ var CloudFlare = PromiseObject.create({
 			},
 			body: Joi.object({
 				value: Joi.number().valid(
+					0,
 					30,
 					60,
 					300,
