@@ -1523,6 +1523,31 @@ var CloudFlare = PromiseObject.create({
 		}, raw));
 	},
 
+		/**
+	 * Update always use https setting for zone
+	 *
+	 * https://api.cloudflare.com/#zone-settings-change-always-use-https-setting
+	 */
+	zoneSettingsAlwaysUseHTTPSUpdate: function($deferred, zone_identifier, body, raw) {
+		$deferred.resolve(this._request({
+			params: {
+				zone_identifier: Joi.string().length(32).required()
+			},
+			body: Joi.object({
+				value: Joi.string().valid('on', 'off').required()
+			}).required()
+		}, {
+			callee: 'zoneSettingsAlwaysUseHTTPSUpdate',
+			method: 'PATCH',
+			path: 'zones/:zone_identifier/settings/always_use_https',
+			required: 'result',
+			params: {
+				zone_identifier: zone_identifier
+			},
+			body: body
+		}, raw));
+	},
+
 	/**
 	 * Update browser cache TTL setting for zone
 	 *
