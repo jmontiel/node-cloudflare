@@ -4113,7 +4113,10 @@ var CloudFlare = PromiseObject.create({
 				})).required(),
 				actions: Joi.array().items(Joi.object({
 				  id: Joi.string(),
-				  value: Joi.string()
+				  value: Joi.alternatives(
+						Joi.string(),
+						Joi.object()
+					)
 				})).required(),
 				priority: Joi.number(),
 				status: Joi.string().valid('active', 'disabled')
